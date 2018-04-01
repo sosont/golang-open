@@ -10,7 +10,7 @@ import (
 var (
     pool          *redis.Pool
     redisServer   = flag.String("redisServer", "139.199.177.131:16379", "")
-    redisPassword = flag.String("redisPassword", "yaoqi1717", "")
+    redisPassword = flag.String("redisPassword", "***mima**", "")
 )
 //初始化一个pool
 func newPool(server, password string) *redis.Pool {
