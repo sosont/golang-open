@@ -1,12 +1,16 @@
-
-package git
+package main
 
 import (
 	"fmt"
-	"github.com/pkg/errors"
 	"os/exec"
 	"strings"
+
+	"github.com/pkg/errors"
 )
+
+func main() {
+	err := Clone("e:\\code\\golang\\src", "https://github.com/ssont/ich.example.git", "master")
+}
 
 func Clone(path, url, branch string) error {
 	return runcmd("git", "clone", "-b", branch, "--single-branch", url, path)

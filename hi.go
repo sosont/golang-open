@@ -19,6 +19,7 @@ func main() {
 	ipstr, err := LocalIP()
 	if err == nil {
 		fmt.Printf("ip: %s", ipstr)
+
 	}
 
 }
@@ -41,6 +42,7 @@ func LocalIP() (net.IP, error) {
 			}
 			if v4 := ipnet.IP.To4(); v4 != nil {
 				return v4, nil
+
 			}
 		}
 	}
